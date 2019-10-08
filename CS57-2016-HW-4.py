@@ -1,0 +1,39 @@
+#Exercise 2
+print "While printing the value of (-5), in a recursion function, there will be \
+a subtraction if (-1), leading the else statement to an infinit loop. \
+Eg.:(-5), (-6), (-7), and so on. The same happens when (0) is executed. \
+The else statement will be printed infinitelly, subtracting (-1) from it. \
+On the other hand, if the (5) is executed, the program will only print the if statement as \
+(5), (4), (3), (2) and (1); that is, the statement cannot be smaller than one."
+
+print("\n")
+#Exercise 3
+def numOrder(abcd):
+    for x in range(0, len(abcd) -1):
+         for y in range(0, len(abcd)-1-x):
+             if abcd[y] > abcd[y+1]:
+                 abcd[y], abcd[y+1] = abcd[y+1], abcd[y]
+    return abcd
+Numbers = ["3", "1", "4", "2"]
+print numOrder(Numbers)
+
+#Exercise 4
+def iterFact(x):
+    n = 1
+    for i in range(2, x + 1):
+        n *= i
+    return n
+print iterFact(5)
+
+
+#Exercise 5
+def iterPower(a,b):
+    while a > 0:
+        a = a ** b
+        return a
+            
+print iterPower(5,4)
+
+
+x=input("press enter to exit")
+print x
